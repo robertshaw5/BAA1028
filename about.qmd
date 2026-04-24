@@ -1,0 +1,31 @@
+---
+title: "About me"
+---
+
+```{=html}
+<section class="about-layout">
+  <div class="about-intro-row">
+  <div class="about-photo-column">
+    <div class="about-photo-slot" aria-label="Photo placeholder">
+      <p class="about-photo-slot__title">Photo space</p>
+      <p class="about-photo-slot__hint">Need to add my image here</p>
+    </div>
+  </div>
+  <div class="about-content-column">
+```
+Add paragraph about me here
+
+```{=html}
+  </div>
+  </div>
+```
+
+## Contact
+
+
+- Email: robshaw03@icloud.com / robert.shaw5@mail.dcu.ie
+- LinkedIn: 
+
+```{=html}
+</section>
+```
