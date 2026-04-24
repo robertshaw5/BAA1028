@@ -1,0 +1,45 @@
+---
+pagetitle: "Robert Shaw"
+toc: false
+page-layout: full
+---
+
+```{=html}
+<section class="landing-hero" aria-labelledby="landing-title">
+  <div class="landing-hero__bg" aria-hidden="true"></div>
+  <div class="landing-hero__inner">
+    <p class="landing-eyebrow">Welcome</p>
+    <h1 id="landing-title" class="landing-title">Robert Shaw</h1>
+    <p class="landing-tagline">
+      My personal website.
+    </p>
+    <div class="landing-actions">
+      <a class="landing-btn landing-btn--primary" href="#highlights">Explore</a>
+    </div>
+  </div>
+</section>
+
+<section class="landing-band" id="highlights" aria-labelledby="highlights-heading">
+  <div class="landing-wrap">
+    <h2 id="highlights-heading" class="landing-section-title">What you'll find here</h2>
+    <p class="landing-section-lead">Hit one of the tiles below to find out a little bit about me, view my CV, look at some of my past projects, and learn about some of my hobbies.</p>
+    <div class="landing-cards" role="list">
+      <article class="landing-card" role="listitem">
+        <div class="landing-card__accent" aria-hidden="true"></div>
+        <h3 class="landing-card__title">About me</h3>
+        <p class="landing-card__text">A little bit more about me inlcuding how to contact me.</p>
+      </article>
+      <article class="landing-card" role="listitem">
+        <div class="landing-card__accent" aria-hidden="true"></div>
+        <h3 class="landing-card__title">Code &amp; projects</h3>
+        <p class="landing-card__text">Explore some of my past projects.</p>
+      </article>
+      <article class="landing-card" role="listitem">
+        <div class="landing-card__accent" aria-hidden="true"></div>
+        <h3 class="landing-card__title">Hobbies</h3>
+        <p class="landing-card__text">Click here to take a look at my hobbies and interests.</p>
+      </article>
+    </div>
+  </div>
+</section>
+```

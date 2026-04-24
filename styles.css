@@ -1,0 +1,231 @@
+/* ------------------------------------------------------------------
+   Landing page — Robert Shaw personal site
+   Fonts: Fraunces (display) + DM Sans (UI) via _font.html
+   ------------------------------------------------------------------ */
+
+:root {
+  --lp-ink: #0f172a;
+  --lp-ink-soft: #334155;
+  --lp-paper: #f8fafc;
+  --lp-card: #ffffff;
+  --lp-line: #e2e8f0;
+  --lp-accent: #0d9488;
+  --lp-accent-deep: #0f766e;
+  --lp-glow: rgba(13, 148, 136, 0.35);
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-ui: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  font-family: var(--font-ui);
+  font-feature-settings: "kern" 1, "liga" 1;
+  color: var(--lp-ink);
+}
+
+/* Full-width landing strips edge-to-edge inside Quarto’s main column */
+main.content .landing-hero,
+main.content .landing-band {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  width: 100vw;
+  max-width: 100vw;
+  position: relative;
+  left: auto;
+  right: auto;
+}
+
+/* --- Hero --- */
+.landing-hero {
+  position: relative;
+  min-height: min(78vh, 52rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(3rem, 8vw, 5rem) 1.5rem;
+  margin-top: -1rem;
+  margin-bottom: 0;
+  overflow: hidden;
+  scroll-margin-top: 4.5rem;
+}
+
+.landing-hero__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(45, 212, 191, 0.22), transparent 55%),
+    radial-gradient(circle at 85% 60%, rgba(13, 148, 136, 0.18), transparent 45%),
+    linear-gradient(165deg, #0f172a 0%, #1e293b 42%, #0f172a 100%);
+}
+
+.landing-hero__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath fill='%23ffffff' fill-opacity='0.03' d='M0 0h100v1H0zm0 40h100v1H0zm0 40h100v1H0M0 0v100h1V0zm40 0v100h1V0zm40 0v100h1V0'/%3E%3C/svg%3E");
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.landing-hero__inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 40rem;
+}
+
+.landing-eyebrow {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(226, 232, 240, 0.75);
+  margin: 0 0 1rem;
+}
+
+.landing-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.35rem, 6vw, 3.35rem);
+  font-weight: 600;
+  font-variation-settings: "opsz" 72;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+  color: #f8fafc;
+  margin: 0 0 0.5rem;
+  padding: 0;
+  border: none;
+}
+
+.landing-title::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 3px;
+  margin: 1.15rem auto 0;
+  border-radius: 2px;
+  background: linear-gradient(90deg, transparent, var(--lp-accent), transparent);
+  opacity: 0.95;
+}
+
+.landing-tagline {
+  font-size: 1.08rem;
+  line-height: 1.65;
+  color: rgba(226, 232, 240, 0.88);
+  margin: 1.35rem 0 0;
+  font-weight: 400;
+}
+
+.landing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.landing-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.35rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: var(--font-ui);
+  border-radius: 0.35rem;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.landing-btn--primary {
+  background: linear-gradient(180deg, #14b8a6 0%, var(--lp-accent) 100%);
+  color: #042f2e;
+  box-shadow: 0 0.35rem 1.25rem var(--lp-glow);
+}
+
+.landing-btn--primary:hover {
+  color: #022c22;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1.5rem rgba(13, 148, 136, 0.45);
+}
+
+/* --- Highlights band --- */
+.landing-band {
+  background: var(--lp-paper);
+  padding: clamp(2.75rem, 6vw, 4rem) 1.5rem;
+  border-bottom: 1px solid var(--lp-line);
+  scroll-margin-top: 4rem;
+}
+
+.landing-wrap {
+  max-width: 68rem;
+  margin: 0 auto;
+}
+
+.landing-section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 1.85rem);
+  font-weight: 600;
+  color: var(--lp-ink);
+  text-align: center;
+  margin: 0 0 0.65rem;
+  letter-spacing: -0.02em;
+}
+
+.landing-section-lead {
+  text-align: center;
+  color: var(--lp-ink-soft);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  max-width: 42rem;
+  margin: 0 auto 2.25rem;
+}
+
+.landing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.25rem;
+}
+
+.landing-card {
+  position: relative;
+  background: var(--lp-card);
+  border: 1px solid var(--lp-line);
+  border-radius: 0.5rem;
+  padding: 1.5rem 1.35rem 1.4rem;
+  box-shadow: 0 0.15rem 0.5rem rgba(15, 23, 42, 0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.landing-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.1);
+  border-color: rgba(13, 148, 136, 0.35);
+}
+
+.landing-card__accent {
+  width: 2.25rem;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--lp-accent), #5eead4);
+  margin-bottom: 1rem;
+}
+
+.landing-card__title {
+  font-family: var(--font-ui);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--lp-ink);
+  margin: 0 0 0.5rem;
+}
+
+.landing-card__text {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--lp-ink-soft);
+  margin: 0;
+}
+
+/* Hide default title block on the landing page only (custom hero replaces it) */
+#quarto-document-content:has(.landing-hero) .quarto-title-block {
+  display: none;
+}

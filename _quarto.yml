@@ -1,0 +1,19 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Robert Shaw"
+  navbar:
+    left:
+      - text: Home
+        href: index.qmd
+
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: true
+    link-external-newwindow: true
+    include-in-header:
+      - _font.html
