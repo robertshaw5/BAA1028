@@ -23,7 +23,7 @@ Get to know a bit more about me by taking a look at some of my hobbies and inter
   <div class="hobby-carousel__viewport">
     <div class="hobby-carousel__track">
       <div class="hobby-carousel__slide is-active">
-        <video class="hobby-video" controls preload="metadata">
+        <video class="hobby-video" controls preload="metadata" poster="images/timelapse_poster_img.png">
           <source src="videos/lampshade_timelapse.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
@@ -193,4 +193,4 @@ I've played GAA since a young age for my local club Naas. Growing up I also play
 - **Coding**  
 I taught myself python after I finished my leaving cert and have loved it ever since. I have also used R before, although not a fan. This year I learned SQL in college. I love using these (with the help of AI!) to create cool and interesting projects.
 - **Sports Betting & Analysis**  
-I want to preface this by saying I am **not** a gambling addict! I enjoy analysing betting markets, identifying pricing inefficiencies, and applying data-driven thinking to find value where odds may not fully reflect the underlying probabilities.
+I want to preface this by saying I am **not** a gambling addict! I enjoy analysing betting markets, identifying pricing inefficiencies, and applying data-driven thinking to find value where odds may not fully reflect the underlying probabilities. Check out some of the work I've done around this [here](sports-betting-analysis-project.html).
