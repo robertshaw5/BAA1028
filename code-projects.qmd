@@ -2,14 +2,15 @@
 title: "Code & projects"
 ---
 
-Explore some of my passion projects, as well as some of my previous college assignments.
+Explore some of my passion projects, as well as previous college assignments.
 
 ### Featured projects
 
 ```{=html}
-<div class="landing-cards" role="list">
+<div class="landing-cards" role="list" style="grid-template-columns: 1fr; max-width: 56rem;">
   <a class="landing-card-link" href="sports-betting-analysis-project.html" role="listitem" aria-label="Open sports betting analysis project page">
     <article class="landing-card">
+      <img src="images/sports_analysis_cover_img.png" alt="Sports betting analysis project cover image" style="width:100%;height:auto;border-radius:0.45rem;margin:0 0 0.9rem;display:block;">
       <div class="landing-card__accent" aria-hidden="true"></div>
       <h3 class="landing-card__title">Sports Betting Analysis Project</h3>
       <p class="landing-card__text">Created a series of webscrapers to compile odds data from multiple sources to look for +EV and Arbitrage oppurtunities.</p>
@@ -17,6 +18,7 @@ Explore some of my passion projects, as well as some of my previous college assi
   </a>
   <a class="landing-card-link" href="project-2.html" role="listitem" aria-label="Open Project 2 page">
     <article class="landing-card">
+      <img src="images/ml_model_img.png" alt="Machine learning project cover image" style="width:100%;height:auto;border-radius:0.45rem;margin:0 0 0.9rem;display:block;">
       <div class="landing-card__accent" aria-hidden="true"></div>
       <h3 class="landing-card__title">Machine Learning Project</h3>
       <p class="landing-card__text">Tested whether a ML model in combination with smarter staking techniques could be used to determine a profitable betting strategy in greyhound win markets in Ireland.</p>
@@ -24,6 +26,7 @@ Explore some of my passion projects, as well as some of my previous college assi
   </a>
   <a class="landing-card-link" href="project-3.html" role="listitem" aria-label="Open Project 3 page">
     <article class="landing-card">
+      <img src="images/timetable_img.png" alt="DCU timetable to Apple Calendar project cover image" style="width:100%;height:auto;border-radius:0.45rem;margin:0 0 0.9rem;display:block;">
       <div class="landing-card__accent" aria-hidden="true"></div>
       <h3 class="landing-card__title">DCU timetable to apple calender</h3>
       <p class="landing-card__text">Created a simple python script to query DCU timetable API for selected modules and turn it into a suitable format for apple calender.</p>
@@ -32,9 +35,59 @@ Explore some of my passion projects, as well as some of my previous college assi
 </div>
 ```
 
-### Tech stack
+### My Favourite Learning Resources
 
-- Languages: Python, SQL, HTML, CSS
-- Frameworks: 
-- Tools:
+```{=html}
+<div class="resource-entry">
+  <div class="resource-tile">CS50 Python Playlist</div>
+  <div class="resource-video-wrap">
+    <iframe
+      src="https://www.youtube.com/embed/OvKCESUCWII?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V"
+      title="YouTube playlist — CS50 Python"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <p class="resource-desc">A playlist I followed some time ago to help me learn python.</p>
+</div>
 
+<div class="resource-entry">
+  <div class="resource-tile">Machine Learning in Python Tutorials</div>
+  <div class="resource-video-wrap">
+    <iframe
+      src="https://www.youtube.com/embed/ujTCoH21GlA?list=PLzMcBGfZo4-mP7qA9cagf68V06sko5otr"
+      title="YouTube playlist — Python tutorials"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <p class="resource-desc">A playlist that helped me learn how to use machine learning techniques in python.</p>
+</div>
+```
+
+### Platforms I can't learn without
+
+```{=html}
+<div class="platforms-list" role="list" aria-label="Platforms I cannot live without">
+  <a class="platform-chip platform-chip--link" role="listitem" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube learning playlist">
+    <img src="images/youtube_icon.png" alt="YouTube icon" class="platform-chip__icon">
+    <span>YouTube</span>
+  </a>
+  <a class="platform-chip platform-chip--link" role="listitem" href="https://www.udemy.com" target="_blank" rel="noopener noreferrer" aria-label="Open Udemy">
+    <img src="images/udemy_icon.png" alt="Udemy icon" class="platform-chip__icon">
+    <span>Udemy</span>
+  </a>
+  <a class="platform-chip platform-chip--link" role="listitem" href="https://stackoverflow.com/questions" target="_blank" rel="noopener noreferrer" aria-label="Open Stack Overflow questions">
+    <img src="images/stack_overflow_icon.png" alt="Stack Overflow icon" class="platform-chip__icon">
+    <span>Stack Overflow</span>
+  </a>
+  <a class="platform-chip platform-chip--link" role="listitem" href="https://www.datacamp.com" target="_blank" rel="noopener noreferrer" aria-label="Open DataCamp">
+    <img src="images/datacamp_icon.png" alt="DataCamp icon" class="platform-chip__icon platform-chip__icon--large">
+    <span>DataCamp</span>
+  </a>
+  <a class="platform-chip platform-chip--link" role="listitem" href="https://chatgpt.com" target="_blank" rel="noopener noreferrer" aria-label="Open ChatGPT">
+    <img src="images/chatgpt_icon.png" alt="ChatGPT icon" class="platform-chip__icon platform-chip__icon--large platform-chip__icon--xlarge">
+    <span>ChatGPT</span>
+  </a>
+</div>
+```
