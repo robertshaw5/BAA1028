@@ -4,6 +4,7 @@ project:
   resources:
     - images/**
     - videos/**
+    - pdf/**
 
 website:
   title: "Robert Shaw"
@@ -17,7 +18,7 @@ website:
       - text: Hobbies & interests
         href: hobbies-interests.html
       - text: My CV
-        href: CV_ROBERT_SHAW.pdf
+        href: pdf/CV_ROBERT_SHAW.pdf
 
 format:
   html:

@@ -11,7 +11,7 @@ toc: false
       <img src="images/headshot.jpeg" alt="Headshot of Robert Shaw" style="width:100%;height:100%;object-fit:cover;border-radius:0.5rem;">
     </div>
     <div style="margin-top: 0.8rem;">
-      <a href="CV_ROBERT_SHAW.pdf" target="_blank" rel="noopener noreferrer">Click here to view my CV</a>
+      <a href="pdf/CV_ROBERT_SHAW.pdf" target="_blank" rel="noopener noreferrer">Click here to view my CV</a>
     </div>
   </div>
   <div class="about-content-column">

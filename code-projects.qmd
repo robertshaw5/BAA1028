@@ -16,7 +16,7 @@ Explore some of my passion projects, as well as previous college assignments.
       <p class="landing-card__text">Created a series of webscrapers to compile odds data from multiple sources to look for +EV and Arbitrage oppurtunities.</p>
     </article>
   </a>
-  <a class="landing-card-link" href="project-2.html" role="listitem" aria-label="Open Project 2 page">
+  <a class="landing-card-link" href="machine-learning-project.html" role="listitem" aria-label="Open machine learning project page">
     <article class="landing-card">
       <img src="images/ml_model_img.png" alt="Machine learning project cover image" style="width:100%;height:auto;border-radius:0.45rem;margin:0 0 0.9rem;display:block;">
       <div class="landing-card__accent" aria-hidden="true"></div>
