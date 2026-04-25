@@ -1,0 +1,175 @@
+---
+title: "Sports Betting Analysis"
+toc: false
+---
+
+## Introduction
+
+Lets start by playing a game.
+
+```{=html}
+<section class="coin-game" aria-labelledby="coin-game-title">
+  <div class="coin-game__topbar">
+    <div class="coin-game__heading">
+      <h3 id="coin-game-title" class="coin-game__title">Coin flip game</h3>
+      <p class="coin-game__synopsis">You are getting your friend a present for their birthday worth €50 when a man approaches you and offers to play a game with the following rules.</p>
+    </div>
+    <div class="coin-game__stats">
+      <div class="coin-game__bankroll-wrap">
+        <span class="coin-game__bankroll-label">Plays</span>
+        <span id="coin-game-plays" class="coin-game__bankroll-value">0</span>
+      </div>
+      <div class="coin-game__bankroll-group">
+        <div class="coin-game__bankroll-wrap">
+          <span class="coin-game__bankroll-label">Bankroll</span>
+          <span id="coin-game-bankroll" class="coin-game__bankroll-value">50 euro</span>
+        </div>
+        <button type="button" id="coin-reset-bankroll" class="coin-game__reset-top">Reset</button>
+      </div>
+    </div>
+  </div>
+  <p class="coin-game__label"><strong>Rules</strong></p>
+  <ul class="coin-game__rules">
+    <li>You flip a <strong>fair</strong> coin.</li>
+    <li>Evertime you flip this coin it costs <strong>€15</strong></li>
+    <li>If it lands on <strong>heads</strong>, you win <strong>€10</strong> and get your <strong>€15 entry fee back</strong>.</li>
+    <li>If it lands on <strong>tails</strong>, you lose your <strong>€15</strong>.</li>
+  </ul>
+  <p class="coin-game__prompt">Do you play the game?</p>
+
+  <div class="coin-game__actions">
+    <button type="button" id="coin-play-yes">Yes, flip that coin</button>
+    <button type="button" id="coin-play-no">No, I don't want to play</button>
+  </div>
+
+  <p id="coin-game-result" class="coin-game__result" aria-live="polite"></p>
+</section>
+<div id="coin-game-followup" class="coin-game__followup" hidden>
+  <p><strong>Reflection:</strong></p>
+  <p>Assuming a fair coin and you start with €50, you can play until your bankroll falls below the €15 entry fee.</p>
+  <p>Each play has:</p>
+  <ul>
+    <li>Heads: +€10 net profit</li>
+    <li>Tails: -€15 net loss</li>
+  </ul>
+  <p>So the expected value per play is:</p>
+  <p><strong>0.5(10) + 0.5(-15) = -€2.50 per play</strong></p>
+  <p>Meaning every time you play the game, your expected change is negative (you are, on average, losing money each round), with tails causing a €15 loss.</p>
+  <p>To estimate how many plays you last, divide starting bankroll by expected loss per play:</p>
+  <p><strong>€50 / €2.50 = 20 plays</strong></p>
+  <p>But you do not need to hit exactly €0. You must stop once your bankroll is below €15, so you can end on €0, €5, or €10.</p>
+  <p>Using the actual stopping rule, the expected number of plays is about:</p>
+  <p><strong>17.7 plays</strong></p>
+  <p>So in plain English:</p>
+  <p><strong>With €50, you should expect to last about 18 coin flips on average before you can no longer afford to play.</strong></p>
+</div>
+
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+  const yesBtn = document.getElementById("coin-play-yes");
+  const noBtn = document.getElementById("coin-play-no");
+  const resetBtn = document.getElementById("coin-reset-bankroll");
+  const result = document.getElementById("coin-game-result");
+  const followup = document.getElementById("coin-game-followup");
+  const bankrollEl = document.getElementById("coin-game-bankroll");
+  const playsEl = document.getElementById("coin-game-plays");
+  if (!yesBtn || !noBtn || !resetBtn || !result || !followup || !bankrollEl || !playsEl) return;
+
+  const startingBankroll = 50;
+  const entryFee = 15;
+  let bankroll = startingBankroll;
+  let plays = 0;
+  const updatePlayState = () => {
+    const canPlay = bankroll >= entryFee;
+    yesBtn.disabled = !canPlay;
+    yesBtn.setAttribute("aria-disabled", String(!canPlay));
+    if (!canPlay) {
+      result.textContent = "You can't afford to play. Birthday presents are overrated anyway.";
+      result.className = "coin-game__result coin-game__result--loss";
+    }
+  };
+  const renderBankroll = () => {
+    bankrollEl.textContent = `€${bankroll}`;
+  };
+  const renderPlays = () => {
+    playsEl.textContent = String(plays);
+  };
+  renderBankroll();
+  renderPlays();
+  updatePlayState();
+
+  yesBtn.addEventListener("click", () => {
+    followup.hidden = false;
+    if (bankroll < entryFee) {
+      updatePlayState();
+      return;
+    }
+
+    const isHeads = Math.random() < 0.5;
+    plays += 1;
+    if (isHeads) {
+      bankroll += 10;
+      result.textContent = "Result: HEADS. You win €10 and get your €15 entry fee back.";
+      result.className = "coin-game__result coin-game__result--win";
+    } else {
+      bankroll -= 15;
+      result.textContent = "Result: TAILS. You lose your €15 entry fee.";
+      result.className = "coin-game__result coin-game__result--loss";
+    }
+    renderBankroll();
+    renderPlays();
+    updatePlayState();
+  });
+
+  noBtn.addEventListener("click", () => {
+    followup.hidden = false;
+    result.textContent = "Smart move";
+    result.className = "coin-game__result";
+  });
+
+  resetBtn.addEventListener("click", () => {
+    bankroll = startingBankroll;
+    plays = 0;
+    renderBankroll();
+    renderPlays();
+    result.textContent = "Bankroll reset to €50.";
+    result.className = "coin-game__result";
+    updatePlayState();
+  });
+});
+</script>
+```
+
+### Overview
+
+The game above represents the common aphorism *The house always wins*. A bookmaker will usually price an outcome in a way that gives them a built-in edge over the customer. In the coin flip example, the true probability of heads is 50%, but the payout is not generous enough to make the game fair for the player. One would expect that a win would pay €15 when it costs €15 to play. But luckily for us, betting markets are among the most inefficient markets that exist. Sometimes bookmakers are forced to move prices to hedge positions when one side of a bet is backed in, other times they are just plain wrong on their probability calculations. Either way, at any given moment throughout the day, there exists potentially hundreds of smart betting oppurtunities.
+
+
+
+
+### What I built
+
+- A series of python based webscrapers that collect event, market, and selection metadata as well as price data for those selections from a wide range of bookmakers. This is all stored in a database hosted on a platform called railway.
+- Fullstack web application to display the data, including auth handling, integrated bet tracking funcitonality.
+- Key feature 3
+
+### Stack
+
+- Languages: Python, SQL, HTML, CSS, Javascript
+- Frameworks: React for the frontend UI, Tailwind CSS for styling, Supabase for authentication and session handling, Flask for backend API, PostgreSQL for database
+
+```{=html}
+<p style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;">
+  <img src="images/website_icon.png" alt="Website icon" style="width:1.1rem;height:1.1rem;border-radius:0.2rem;object-fit:cover;">
+  <a href="https://robshaw03.github.io/betting-site/#/" target="_blank" rel="noopener noreferrer">Visit the live site</a>
+</p>
+```
+
+### Demo Video
+
+```{=html}
+<video controls width="100%" preload="metadata" poster="images/demo_video_poster_img.png">
+  <source src="videos/betting_site_demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+```

@@ -542,3 +542,207 @@ main.content .landing-band {
     height: 11rem;
   }
 }
+
+/* --- Project 1 coin game --- */
+.coin-game {
+  margin-top: 0.9rem;
+  padding: 1rem 1rem 0.9rem;
+  border: 1px solid var(--lp-line);
+  border-radius: 0.65rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  box-shadow: 0 0.2rem 0.8rem rgba(15, 23, 42, 0.06);
+}
+
+.coin-game__title {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+}
+
+.coin-game__topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.coin-game__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.coin-game__stats {
+  display: flex;
+  gap: 0.45rem;
+  align-items: flex-start;
+}
+
+.coin-game__bankroll-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.coin-game__bankroll-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background: #f1f5f9;
+  border: 1px solid var(--lp-line);
+  border-radius: 0.45rem;
+  padding: 0.35rem 0.5rem;
+  width: 8.2rem;
+  box-sizing: border-box;
+}
+
+.coin-game__bankroll-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--lp-ink-soft);
+}
+
+.coin-game__bankroll-value {
+  font-weight: 700;
+  color: var(--lp-ink);
+}
+
+.coin-game__reset-top {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.45rem;
+  background: #ffffff;
+  color: #0f172a;
+  padding: 0.38rem 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.coin-game__label {
+  margin: 0 0 0.35rem;
+  color: var(--lp-ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.78rem;
+}
+
+.coin-game__synopsis {
+  margin: 0;
+  color: var(--lp-ink-soft);
+  font-size: 0.93rem;
+  line-height: 1.45;
+}
+
+.coin-game__label {
+  margin-top: 0.65rem;
+}
+
+.coin-game__rules {
+  margin: 0 0 0.8rem;
+  padding-left: 1.1rem;
+}
+
+.coin-game__rules li {
+  margin-bottom: 0.35rem;
+}
+
+.coin-game__prompt {
+  margin: 0.25rem 0 0.6rem;
+  font-weight: 700;
+  color: var(--lp-ink);
+}
+
+.coin-game__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.coin-game__actions button {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0.45rem;
+  padding: 0.55rem 0.9rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.16s ease, background-color 0.16s ease;
+}
+
+#coin-play-yes {
+  background: var(--lp-accent);
+  color: #ffffff;
+  box-shadow: 0 0.25rem 0.8rem rgba(13, 148, 136, 0.32);
+}
+
+#coin-play-no {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+#coin-reset-bankroll {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+.coin-game__actions button:hover {
+  transform: translateY(-1px);
+}
+
+.coin-game__actions button:disabled {
+  cursor: not-allowed;
+  transform: none;
+  opacity: 0.6;
+  box-shadow: none;
+}
+
+.coin-game__result {
+  margin: 0.75rem 0 0;
+  padding: 0.55rem 0.65rem;
+  border-radius: 0.45rem;
+  background: #f1f5f9;
+  color: var(--lp-ink);
+  min-height: 2.1rem;
+}
+
+.coin-game__result--win {
+  background: #ecfdf5;
+  color: #065f46;
+}
+
+.coin-game__result--loss {
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.coin-game__followup {
+  margin-top: 0.55rem;
+  padding: 0.6rem 0.7rem;
+  border-radius: 0.45rem;
+  background: #eef2ff;
+  color: #1e1b4b;
+}
+
+.coin-game__followup p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 640px) {
+  .coin-game__topbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .coin-game__bankroll-wrap {
+    align-items: flex-start;
+    width: fit-content;
+  }
+
+  .coin-game__stats {
+    flex-wrap: wrap;
+  }
+}

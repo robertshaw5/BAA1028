@@ -8,7 +8,7 @@ Explore some of my passion projects, as well as some of my previous college assi
 
 ```{=html}
 <div class="landing-cards" role="list">
-  <a class="landing-card-link" href="project-1.html" role="listitem" aria-label="Open Project 1 page">
+  <a class="landing-card-link" href="sports-betting-analysis-project.html" role="listitem" aria-label="Open sports betting analysis project page">
     <article class="landing-card">
       <div class="landing-card__accent" aria-hidden="true"></div>
       <h3 class="landing-card__title">Sports Betting Analysis Project</h3>
