@@ -151,7 +151,6 @@ The game above represents the common aphorism *The house always wins*. A bookmak
 
 - A series of python based webscrapers that collect event, market, and selection metadata as well as price data for those selections from a wide range of bookmakers. This is all stored in a database hosted on a platform called railway.
 - Fullstack web application to display the data, including auth handling, integrated bet tracking funcitonality.
-- Key feature 3
 
 ### Stack
 
