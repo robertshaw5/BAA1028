@@ -164,7 +164,7 @@ The game above represents the common aphorism *The house always wins*. A bookmak
 </p>
 ```
 
-### Demo Video
+### Video Demo
 
 ```{=html}
 <video controls width="100%" preload="metadata" poster="images/demo_video_poster_img.png">

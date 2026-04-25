@@ -1,30 +1,47 @@
 ---
 title: "About me"
+toc: false
 ---
 
 ```{=html}
 <section class="about-layout">
   <div class="about-intro-row">
   <div class="about-photo-column">
-    <div class="about-photo-slot" aria-label="Photo placeholder">
-      <p class="about-photo-slot__title">Photo space</p>
-      <p class="about-photo-slot__hint">Need to add my image here</p>
+    <div class="about-photo-slot" aria-label="Profile photo" style="border:none;background:transparent;padding:0;min-height:20rem;">
+      <img src="images/headshot.jpeg" alt="Headshot of Robert Shaw" style="width:100%;height:100%;object-fit:cover;border-radius:0.5rem;">
+    </div>
+    <div style="margin-top: 0.8rem;">
+      <a href="CV_ROBERT_SHAW.pdf" target="_blank" rel="noopener noreferrer">Click here to view my CV</a>
     </div>
   </div>
   <div class="about-content-column">
 ```
-Add paragraph about me here
+<div style="text-align: justify; text-justify: inter-word;">
+I’m an Accounting and Finance student graduating in 2026, with a strong interest in finance, data analytics, programming, and sports betting analysis. I enjoy working on projects that involve solving real problems, especially where I can combine commercial thinking with technology and automation. Alongside my studies, I work with U.S. Bank | Elavon as a Process Improvement and Automation Intern. I originally joined as a summer intern and was later kept on during the year on a 20-hour-per-week contract alongside my final year of studies. In September, I will be starting their graduate programme as a Process Transformation and Finance Graduate. During my time there, I created the first AI agent to be released into production in the entire 70,000-person organisation, built the first Power BI dashboard to monitor Copilot usage data and provide management with clearer analytics, trained over 300 people in sales and revenue-generating roles on using AI to improve commercial outcomes, and supported the development and implementation of wider process improvement initiatives.
+</div>
 
 ```{=html}
   </div>
   </div>
 ```
 
-## Contact
+## Get in touch
 
-
-- Email: robshaw03@icloud.com / robert.shaw5@mail.dcu.ie
-- LinkedIn: 
+- ```{=html}
+  <img src="images/email_icon.png" alt="Email icon" style="width:1.15rem;height:1.15rem;vertical-align:middle;margin-right:0.4rem;">
+  <a href="mailto:robshaw03@icloud.com">robshaw03@icloud.com</a> /
+  <a href="mailto:robert.shaw5@mail.dcu.ie">robert.shaw5@mail.dcu.ie</a>
+  ```
+- ```{=html}
+  <img src="images/phone_icon.png" alt="Phone icon" style="width:1.15rem;height:1.15rem;vertical-align:middle;margin-right:0.4rem;">
+  <a href="tel:0830317895">0830317895</a>
+  ```
+- ```{=html}
+  <a href="https://www.linkedin.com/in/robert-shaw-8b72b9293/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile">
+    <img src="images/linkedin_icon.png" alt="LinkedIn icon" style="width:1.15rem;height:1.15rem;vertical-align:middle;margin-right:0.4rem;">
+    <span>LinkedIn</span>
+  </a>
+  ```
 
 ```{=html}
 </section>

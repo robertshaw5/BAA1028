@@ -254,8 +254,7 @@ main.content .landing-band {
 }
 
 .about-photo-column {
-  position: sticky;
-  top: 5rem;
+  position: static;
 }
 
 .about-photo-slot {
