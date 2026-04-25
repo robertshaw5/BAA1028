@@ -24,7 +24,7 @@ Explore some of my passion projects, as well as previous college assignments.
       <p class="landing-card__text">Tested whether a ML model in combination with smarter staking techniques could be used to determine a profitable betting strategy in greyhound win markets in Ireland.</p>
     </article>
   </a>
-  <a class="landing-card-link" href="project-3.html" role="listitem" aria-label="Open Project 3 page">
+  <a class="landing-card-link" href="dcu-timetable-to-apple-calender.html" role="listitem" aria-label="Open DCU timetable to apple calender page">
     <article class="landing-card">
       <img src="images/timetable_img.png" alt="DCU timetable to Apple Calendar project cover image" style="width:100%;height:auto;border-radius:0.45rem;margin:0 0 0.9rem;display:block;">
       <div class="landing-card__accent" aria-hidden="true"></div>
