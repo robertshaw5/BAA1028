@@ -84,7 +84,7 @@ Get to know a bit more about me by taking a look at some of my hobbies and inter
 </dialog>
 
 <script>
-(() => {
+window.addEventListener("DOMContentLoaded", () => {
   const lightbox = document.getElementById("hobby-lightbox");
   if (lightbox) {
     const lightboxImage = lightbox.querySelector(".hobby-lightbox__image");
@@ -115,6 +115,12 @@ Get to know a bit more about me by taking a look at some of my hobbies and inter
     const dotsWrap = carousel.querySelector(".hobby-carousel__dots");
     if (!track || slides.length === 0 || !prevBtn || !nextBtn || !dotsWrap) return;
 
+    if (slides.length <= 1) {
+      prevBtn.style.display = "none";
+      nextBtn.style.display = "none";
+      dotsWrap.style.display = "none";
+    }
+
     let current = 0;
 
     const dots = slides.map((_, index) => {
@@ -138,10 +144,50 @@ Get to know a bit more about me by taking a look at some of my hobbies and inter
     nextBtn.addEventListener("click", () => goTo(current + 1));
     goTo(0);
   });
-})();
+});
 </script>
 ```
 
-## Fishing, hiking and the outdoors
+## Fishing, hiking and nature
 
-Write about your second hobby here.
+```{=html}
+<div class="hobby-split">
+  <div class="hobby-carousel hobby-carousel--compact" data-carousel>
+    <button type="button" class="hobby-carousel__btn hobby-carousel__btn--prev" aria-label="Previous media">&#10094;</button>
+    <div class="hobby-carousel__viewport">
+      <div class="hobby-carousel__track">
+        <div class="hobby-carousel__slide is-active">
+          <a href="images/Montenegro.jpeg" class="hobby-lightbox-trigger" data-full-src="images/Montenegro.jpeg" aria-label="Open larger Montenegro landscape image">
+            <img src="images/Montenegro.jpeg" alt="Landscape view in Montenegro">
+          </a>
+          <p class="hobby-carousel__title">Picture from my trip to Montenegro</p>
+        </div>
+        <div class="hobby-carousel__slide">
+          <a href="images/first_fish.jpeg" class="hobby-lightbox-trigger" data-full-src="images/first_fish.jpeg" aria-label="Open larger first fish image">
+            <img src="images/first_fish.jpeg" alt="First fish catch">
+          </a>
+          <p class="hobby-carousel__title">My first fish</p>
+        </div>
+        <div class="hobby-carousel__slide">
+          <a href="images/niagra_falls.jpeg" class="hobby-lightbox-trigger" data-full-src="images/niagra_falls.jpeg" aria-label="Open larger Niagara Falls image">
+            <img src="images/niagra_falls.jpeg" alt="Niagara Falls viewpoint">
+          </a>
+          <p class="hobby-carousel__title">Niagara Falls</p>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="hobby-carousel__btn hobby-carousel__btn--next" aria-label="Next media">&#10095;</button>
+    <div class="hobby-carousel__dots" aria-label="Media slide navigation"></div>
+  </div>
+
+  <div class="hobby-intro__text">
+    <p>In my spare time, I am typically outdoors, whether I'm going fishing with my friends or on a hike. I like the peace that nature provides. I often hike different trails in glendalough and typically do atleast one hike or walking trail whenever I go on holiday. I recently went to montenegro which had the most naturally beautiful landscape I had ever seen.</p>
+  </div>
+</div>
+```
+
+## My other hobbies & interests
+
+- I'm an avid sports fan. I've played GAA since a young age for my local club Naas. Growing up I also played rugby for Naas RFC and my school Naas CBS.
+- I enjoy problem-solving with coding. I taught myself python after I finished my leaving cert and have loved it ever since. I have also used R before, although not a fan. This year I learned SQL in college. I love using these (with the help of AI!) to create cool and interesting projects.
+- Sports betting. I want to preface this by saying I am **not** a gambling addict! I enjoy analysing betting markets, identifying pricing inefficiencies, and applying data-driven thinking to find value where odds may not fully reflect the underlying probabilities.
