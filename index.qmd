@@ -31,11 +31,13 @@ page-layout: full
           <p class="landing-card__text">A little bit more about me including how to contact me.</p>
         </article>
       </a>
-      <article class="landing-card" role="listitem">
-        <div class="landing-card__accent" aria-hidden="true"></div>
-        <h3 class="landing-card__title">Code &amp; projects</h3>
-        <p class="landing-card__text">Explore some of my past projects.</p>
-      </article>
+      <a class="landing-card-link" href="code-projects.html" role="listitem" aria-label="Go to Code and projects page">
+        <article class="landing-card">
+          <div class="landing-card__accent" aria-hidden="true"></div>
+          <h3 class="landing-card__title">Code &amp; projects</h3>
+          <p class="landing-card__text">Explore some of my past projects.</p>
+        </article>
+      </a>
       <article class="landing-card" role="listitem">
         <div class="landing-card__accent" aria-hidden="true"></div>
         <h3 class="landing-card__title">Hobbies</h3>

@@ -1,0 +1,40 @@
+---
+title: "Code & projects"
+---
+
+Explore some of my passion projects, as well as some of my previous college assignments.
+
+### Featured projects
+
+```{=html}
+<div class="landing-cards" role="list">
+  <a class="landing-card-link" href="project-1.html" role="listitem" aria-label="Open Project 1 page">
+    <article class="landing-card">
+      <div class="landing-card__accent" aria-hidden="true"></div>
+      <h3 class="landing-card__title">Sports Betting Analysis Project</h3>
+      <p class="landing-card__text">Created a series of webscrapers to compile odds data from multiple sources to look for +EV and Arbitrage oppurtunities.</p>
+    </article>
+  </a>
+  <a class="landing-card-link" href="project-2.html" role="listitem" aria-label="Open Project 2 page">
+    <article class="landing-card">
+      <div class="landing-card__accent" aria-hidden="true"></div>
+      <h3 class="landing-card__title">Machine Learning Project</h3>
+      <p class="landing-card__text">Tested whether a ML model in combination with smarter staking techniques could be used to determine a profitable betting strategy in greyhound win markets in Ireland.</p>
+    </article>
+  </a>
+  <a class="landing-card-link" href="project-3.html" role="listitem" aria-label="Open Project 3 page">
+    <article class="landing-card">
+      <div class="landing-card__accent" aria-hidden="true"></div>
+      <h3 class="landing-card__title">DCU timetable to apple calender</h3>
+      <p class="landing-card__text">Created a simple python script to query DCU timetable API for selected modules and turn it into a suitable format for apple calender.</p>
+    </article>
+  </a>
+</div>
+```
+
+### Tech stack
+
+- Languages: Python, SQL, HTML, CSS
+- Frameworks: 
+- Tools:
+

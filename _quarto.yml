@@ -7,9 +7,11 @@ website:
   navbar:
     left:
       - text: Home
-        href: index.qmd
+        href: index.html
       - text: About
-        href: about.qmd
+        href: about.html
+      - text: Code & projects
+        href: code-projects.html
 
 format:
   html:
