@@ -10,9 +10,7 @@ website:
   favicon: images/favicon.png
   navbar:
     left:
-      - text: Home
-        href: index.html
-      - text: About
+      - text: About Me
         href: about.html
       - text: Code & projects
         href: code-projects.html
