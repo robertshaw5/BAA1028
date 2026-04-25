@@ -188,6 +188,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
 ## My other hobbies & interests
 
-- I'm an avid sports fan. I've played GAA since a young age for my local club Naas. Growing up I also played rugby for Naas RFC and my school Naas CBS.
-- I enjoy problem-solving with coding. I taught myself python after I finished my leaving cert and have loved it ever since. I have also used R before, although not a fan. This year I learned SQL in college. I love using these (with the help of AI!) to create cool and interesting projects.
-- Sports betting. I want to preface this by saying I am **not** a gambling addict! I enjoy analysing betting markets, identifying pricing inefficiencies, and applying data-driven thinking to find value where odds may not fully reflect the underlying probabilities.
+- **Sports**  
+I've played GAA since a young age for my local club Naas. Growing up I also played rugby for Naas RFC and my school Naas CBS.
+- **Coding**  
+I taught myself python after I finished my leaving cert and have loved it ever since. I have also used R before, although not a fan. This year I learned SQL in college. I love using these (with the help of AI!) to create cool and interesting projects.
+- **Sports Betting & Analysis**  
+I want to preface this by saying I am **not** a gambling addict! I enjoy analysing betting markets, identifying pricing inefficiencies, and applying data-driven thinking to find value where odds may not fully reflect the underlying probabilities.
