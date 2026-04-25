@@ -38,11 +38,13 @@ page-layout: full
           <p class="landing-card__text">Explore some of my past projects.</p>
         </article>
       </a>
-      <article class="landing-card" role="listitem">
-        <div class="landing-card__accent" aria-hidden="true"></div>
-        <h3 class="landing-card__title">Hobbies</h3>
-        <p class="landing-card__text">Click here to take a look at my hobbies and interests.</p>
-      </article>
+      <a class="landing-card-link" href="hobbies-interests.html" role="listitem" aria-label="Go to Hobbies and interests page">
+        <article class="landing-card">
+          <div class="landing-card__accent" aria-hidden="true"></div>
+          <h3 class="landing-card__title">Hobbies</h3>
+          <p class="landing-card__text">Click here to take a look at my hobbies and interests.</p>
+        </article>
+      </a>
     </div>
   </div>
 </section>

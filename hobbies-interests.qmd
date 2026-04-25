@@ -1,0 +1,147 @@
+---
+title: "Hobbies & interests"
+---
+
+Get to know a bit more about me by taking a look at some of my hobbies and interests.
+
+## 3D design and printing
+
+```{=html}
+<div class="hobby-intro">
+  <div class="hobby-intro__text">
+    <p>One of my hobbies is 3D printing. I really enjoy desinging and producing practical, custom objects using CAD software and my Bambu Labs P1S 3D printer. I like taking ideas from concept and watching them materialise into a finished product that I can hold in my hands. I taught myself how to use Fusion 360, which is a free CAD modelling software, and to use Bambu Studio's which is used to prepare prints and alter any print settings like configuring the material, layer height, supports, infills and surface finishes. What I love most about it is the problem-solving aspect. Rarely do I ever print something that I modelled just once, it typically takes a few tries to get it perfect through constant iteration.</p>
+  </div>
+  <a href="images/3d_printer.jpeg" class="hobby-lightbox-trigger hobby-intro__image-wrap" data-full-src="images/3d_printer.jpeg" aria-label="Open larger 3D printer image">
+    <img class="hobby-intro__image" src="images/3d_printer.jpeg" alt="3D printer in progress">
+  </a>
+</div>
+
+<h3>Some of the stuff I've made</h3>
+
+<div class="hobby-carousel" data-carousel>
+  <button type="button" class="hobby-carousel__btn hobby-carousel__btn--prev" aria-label="Previous media">&#10094;</button>
+  <div class="hobby-carousel__viewport">
+    <div class="hobby-carousel__track">
+      <div class="hobby-carousel__slide is-active">
+        <video class="hobby-video" controls preload="metadata">
+          <source src="videos/lampshade_timelapse.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="hobby-carousel__title">Lampshade print timelapse</p>
+        <p class="hobby-carousel__desc">This print took 11 and half hours. It was amongst one of the first things that I printed that I actually modelled myself. How cool is the timelapse!!</p>
+      </div>
+      <div class="hobby-carousel__slide">
+        <a href="images/CAD_ss.png" class="hobby-lightbox-trigger" data-full-src="images/CAD_ss.png" aria-label="Open larger CAD model screenshot">
+          <img src="images/CAD_ss.png" alt="CAD model screenshot">
+        </a>
+        <p class="hobby-carousel__title">CAD design screenshot</p>
+        <p class="hobby-carousel__desc">I taught myself how to use Fusion360, a free CAD modelling software. This is how the part looked before sending it to print.</p>
+      </div>
+      <div class="hobby-carousel__slide">
+        <a href="images/3d_printed_lamp.jpeg" class="hobby-lightbox-trigger" data-full-src="images/3d_printed_lamp.jpeg" aria-label="Open larger finished lamp image">
+          <img src="images/3d_printed_lamp.jpeg" alt="Finished 3D printed lamp">
+        </a>
+        <p class="hobby-carousel__title">Final 3D printed lamp</p>
+        <p class="hobby-carousel__desc">The completed piece after assembly. I took the wiring compenents from an old lamp that was destined for the dump.</p>
+      </div>
+      <div class="hobby-carousel__slide">
+        <a href="images/3d_printed_phone_dock.jpg" class="hobby-lightbox-trigger" data-full-src="images/3d_printed_phone_dock.jpg" aria-label="Open larger 3D printed phone dock image">
+          <img src="images/3d_printed_phone_dock.jpg" alt="3D printed phone dock">
+        </a>
+        <p class="hobby-carousel__title">Phone dock</p>
+        <p class="hobby-carousel__desc">This was a design I found online. It is a phone docking station that looks like an old school alarm clock, and supports magsafe charging for Iphones. I also added a charger for the apple watch.</p>
+      </div>
+      <div class="hobby-carousel__slide">
+        <a href="images/3d_printed_lamp2.jpg" class="hobby-lightbox-trigger" data-full-src="images/3d_printed_lamp2.jpg" aria-label="Open larger second 3D printed lamp image">
+          <img src="images/3d_printed_lamp2.jpg" alt="Second 3D printed lamp">
+        </a>
+        <p class="hobby-carousel__title">Another lamp</p>
+        <p class="hobby-carousel__desc">An oddly designed lamp that I modelled. This was my first time printing in with white PLA which really highlights imperfections. Again I took apart a lamp that was heading to the dump.</p>
+      </div>
+      <div class="hobby-carousel__slide">
+        <a href="images/3d_printed_kitchen_organiser.jpg" class="hobby-lightbox-trigger" data-full-src="images/3d_printed_kitchen_organiser.jpg" aria-label="Open larger 3D printed kitchen organiser image">
+          <img src="images/3d_printed_kitchen_organiser.jpg" alt="3D printed kitchen organiser">
+        </a>
+        <p class="hobby-carousel__title">Kitchen storage organiser</p>
+        <p class="hobby-carousel__desc">One of the many storage/organiser pieces that I have printed.</p>
+      </div>
+      <div class="hobby-carousel__slide">
+        <a href="images/3d_printed_nespresso_pod_holder.jpg" class="hobby-lightbox-trigger" data-full-src="images/3d_printed_nespresso_pod_holder.jpg" aria-label="Open larger 3D printed Nespresso pod holder image">
+          <img src="images/3d_printed_nespresso_pod_holder.jpg" alt="3D printed Nespresso pod holder">
+        </a>
+        <p class="hobby-carousel__title">Nespresso Pod holder</p>
+        <p class="hobby-carousel__desc">This is designed to fit Nespresso pod boxes and store them neatly, making the pods easily accessible. This is probably my favourite print because of how simple and easy it is.</p>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="hobby-carousel__btn hobby-carousel__btn--next" aria-label="Next media">&#10095;</button>
+  <div class="hobby-carousel__dots" aria-label="Media slide navigation"></div>
+</div>
+
+<dialog class="hobby-lightbox" id="hobby-lightbox">
+  <button type="button" class="hobby-lightbox__close" aria-label="Close image">&times;</button>
+  <img class="hobby-lightbox__image" src="" alt="">
+</dialog>
+
+<script>
+(() => {
+  const lightbox = document.getElementById("hobby-lightbox");
+  if (lightbox) {
+    const lightboxImage = lightbox.querySelector(".hobby-lightbox__image");
+    const closeButton = lightbox.querySelector(".hobby-lightbox__close");
+    const triggers = document.querySelectorAll(".hobby-lightbox-trigger");
+
+    triggers.forEach((trigger) => {
+      trigger.addEventListener("click", (event) => {
+        event.preventDefault();
+        lightboxImage.src = trigger.dataset.fullSrc || trigger.getAttribute("href");
+        lightboxImage.alt = trigger.querySelector("img")?.alt || "Expanded hobby image";
+        lightbox.showModal();
+      });
+    });
+
+    closeButton.addEventListener("click", () => lightbox.close());
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) lightbox.close();
+    });
+  }
+
+  const carousels = document.querySelectorAll("[data-carousel]");
+  carousels.forEach((carousel) => {
+    const track = carousel.querySelector(".hobby-carousel__track");
+    const slides = Array.from(carousel.querySelectorAll(".hobby-carousel__slide"));
+    const prevBtn = carousel.querySelector(".hobby-carousel__btn--prev");
+    const nextBtn = carousel.querySelector(".hobby-carousel__btn--next");
+    const dotsWrap = carousel.querySelector(".hobby-carousel__dots");
+    if (!track || slides.length === 0 || !prevBtn || !nextBtn || !dotsWrap) return;
+
+    let current = 0;
+
+    const dots = slides.map((_, index) => {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "hobby-carousel__dot";
+      dot.setAttribute("aria-label", `Go to media ${index + 1}`);
+      dot.addEventListener("click", () => goTo(index));
+      dotsWrap.appendChild(dot);
+      return dot;
+    });
+
+    const goTo = (index) => {
+      current = (index + slides.length) % slides.length;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      slides.forEach((slide, i) => slide.classList.toggle("is-active", i === current));
+      dots.forEach((dot, i) => dot.classList.toggle("is-active", i === current));
+    };
+
+    prevBtn.addEventListener("click", () => goTo(current - 1));
+    nextBtn.addEventListener("click", () => goTo(current + 1));
+    goTo(0);
+  });
+})();
+</script>
+```
+
+## Fishing, hiking and the outdoors
+
+Write about your second hobby here.
