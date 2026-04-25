@@ -1,0 +1,21 @@
+---
+title: "My CV"
+---
+
+## Curriculum Vitae
+
+Add your CV content here, or replace this page with a PDF link.
+
+### Education
+
+- Degree, Institution, Year
+
+### Experience
+
+- Role, Company, Dates
+
+### Skills
+
+- Skill 1
+- Skill 2
+- Skill 3

@@ -12,6 +12,8 @@ website:
         href: about.html
       - text: Code & projects
         href: code-projects.html
+      - text: My CV
+        href: CV_ROBERT_SHAW.pdf
 
 format:
   html:
